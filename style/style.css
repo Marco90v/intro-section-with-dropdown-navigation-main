@@ -60,7 +60,7 @@ main{
     transform: translateX(0%);
 }
 .logo{
-    margin-top:1.3rem;
+    margin-top:1rem;
 }
 .menu{
     position: fixed;
@@ -88,13 +88,16 @@ main{
     margin-bottom: 15px;
 }
 .nav-link > a {
+    color: var(--Gray);
+}
+.nav-link > a:hover {
     color: var(--Black);
 }
 .dropdown-list{
     display: none;
 }
 .dropOpen {
-    display: initial;
+    display: block;
     transition: all .3s linear;
 }
 .arrow-up{
@@ -114,7 +117,6 @@ main{
 }
 .dropdpwn-link > a{
     color: var(--Black);
-
 }
 .registration{
     display: none;
@@ -127,20 +129,26 @@ main{
     margin-top: 3rem;
 }
 .titulo{
-    font-size: 32px;
+    font-size: 2.3rem;
+    font-weight: bold;
 }
 .description{
     font-size: 18px;
-    margin: 1rem .5rem
+    margin: 1rem .5rem;
+    line-height: 1.5rem;
+    color: var(--Gray);
 }
 .learnMore{
     background-color: var(--Black);
     color: var(--White);
     height: 40px;
     font-size: .9rem;
+    font-weight: bold;
     border-radius: 12px;
-    border: 0;
+    border: 1px solid var(--Black);
     width: 120px;
+    cursor: pointer;
+    transition: .2s all linear;
 }
 .clients{
     display: flex;
@@ -153,7 +161,94 @@ main{
 .clients img{
     max-width: 69px;
 }
+.attribution{
+    color: var(--Gray);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.attribution a{
+    color: var(--Gray);
+}
 
 @media(min-width:850px){
-    
+    nav{
+        position: initial;
+        max-width: 80vw;
+        height: auto;
+        background: transparent;
+        margin: 0 2rem;
+        flex: 3;
+        align-items: center;
+        transform: translate(0%);
+    }
+    header{
+        padding: 1.5rem 3rem;
+        justify-content: center;
+    }
+    main{
+        display: flex;
+        max-width: 1200px;
+        margin: 5rem 10rem;
+        gap: 5rem;
+    }
+    picture{
+        order:2
+    }
+    nav .nav-links{
+        display: flex;
+        flex: 3;
+        margin-top: 0;
+    }
+    .titulo{
+        font-size: 4.7rem;
+        text-align: left;
+    }
+    .descriptio-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        order:1;
+        margin-top: 5rem;
+    }
+    .description{
+        font-size: 18px;
+        margin: 1rem 0.5rem;
+        text-align: left;
+        color: var(--Gray);
+    }
+    .menu{
+        display: none;
+    }
+    .nav-link{
+        text-align: right;
+        margin: 0 1rem;
+    }
+    .dropdown-list{
+        position: absolute;
+        top: calc(100% + 1rem);
+        width: max-content;
+        background-color: white;
+        box-shadow: 0 1rem 1rem 0 rgba(0, 0, 0, 0.2);
+        padding: 1rem 0;
+        border-radius: .5rem;
+    }
+    .registration{
+        display: flex;
+        justify-content: flex-end;
+        line-height: 2rem;
+    }
+    .registration .nav-link{
+        padding: .1rem 1rem;
+    }
+    .registration .nav-link:nth-child(2){
+        border: .1rem solid var(--Gray);
+        border-radius: 10px;
+    }
+    .learnMore:hover{
+        background-color: var(--White);
+        color: var(--Black);
+    }
+    .clients{
+        margin: 0;
+    }
 }
